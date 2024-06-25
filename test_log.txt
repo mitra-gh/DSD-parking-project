@@ -1,0 +1,54 @@
+run -all
+# At time  8, uni_parked_car =   0, f_parked_car =   0, uni_vacated_space = 500, f_vacated_space = 200
+# At time  9, uni_parked_car =   0, f_parked_car =   0, uni_vacated_space = 500, f_vacated_space = 200
+# At time 10, uni_parked_car =   0, f_parked_car =   0, uni_vacated_space = 500, f_vacated_space = 200
+# At time 11, uni_parked_car =   0, f_parked_car =   0, uni_vacated_space = 500, f_vacated_space = 200
+# At time 12, uni_parked_car =   0, f_parked_car =   0, uni_vacated_space = 500, f_vacated_space = 200
+# At time 13, uni_parked_car =   0, f_parked_car =   0, uni_vacated_space = 450, f_vacated_space = 250
+# At time 14, uni_parked_car =   0, f_parked_car =   0, uni_vacated_space = 400, f_vacated_space = 300
+# At time 15, uni_parked_car =   0, f_parked_car =   0, uni_vacated_space = 350, f_vacated_space = 350
+# At time 16, uni_parked_car =   0, f_parked_car =   0, uni_vacated_space = 200, f_vacated_space = 500
+# At time 17, uni_parked_car =   0, f_parked_car =   0, uni_vacated_space = 200, f_vacated_space = 500
+# At time 18, uni_parked_car =   0, f_parked_car =   0, uni_vacated_space = 200, f_vacated_space = 500
+# At time 19, uni_parked_car =   0, f_parked_car =   0, uni_vacated_space = 200, f_vacated_space = 500
+# At time 20, uni_parked_car =   0, f_parked_car =   0, uni_vacated_space = 200, f_vacated_space = 500
+# At time 21, uni_parked_car =   0, f_parked_car =   0, uni_vacated_space = 200, f_vacated_space = 500
+# At time 22, uni_parked_car =   0, f_parked_car =   0, uni_vacated_space = 200, f_vacated_space = 500
+# At time 23, uni_parked_car =   0, f_parked_car =   0, uni_vacated_space = 200, f_vacated_space = 500
+# At time  0, uni_parked_car =   0, f_parked_car =   0, uni_vacated_space = 200, f_vacated_space = 500
+# At time  1, uni_parked_car =   0, f_parked_car =   0, uni_vacated_space = 200, f_vacated_space = 500
+# At time  2, uni_parked_car =   0, f_parked_car =   0, uni_vacated_space = 200, f_vacated_space = 500
+# At time  3, uni_parked_car =   0, f_parked_car =   0, uni_vacated_space = 200, f_vacated_space = 500
+# At time  4, uni_parked_car =   0, f_parked_car =   0, uni_vacated_space = 200, f_vacated_space = 500
+# At time  5, uni_parked_car =   0, f_parked_car =   0, uni_vacated_space = 200, f_vacated_space = 500
+# At time  6, uni_parked_car =   0, f_parked_car =   0, uni_vacated_space = 200, f_vacated_space = 500
+# At time  7, uni_parked_car =   0, f_parked_car =   0, uni_vacated_space = 200, f_vacated_space = 500
+# enter 202 free cars: 
+# At time  8, uni_parked_car =   0, f_parked_car = 200, uni_vacated_space = 500, f_vacated_space =   0
+# enter 200 university cars: 
+# At time 10, uni_parked_car = 200, f_parked_car = 200, uni_vacated_space = 300, f_vacated_space =   0
+# exit 100 university cars: 
+# At time 11, uni_parked_car = 100, f_parked_car = 200, uni_vacated_space = 400, f_vacated_space =   0
+# enter and exit 50 university cars: 
+# At time 12, uni_parked_car = 100, f_parked_car = 200, uni_vacated_space = 400, f_vacated_space =   0
+# enter 402 university cars: 
+# At time 12, uni_parked_car = 500, f_parked_car = 200, uni_vacated_space =   0, f_vacated_space =   0
+# exit 25 university cars: 
+# At time 12, uni_parked_car = 475, f_parked_car = 200, uni_vacated_space =  25, f_vacated_space =   0
+# enter 50 free cars: 
+# At time 14, uni_parked_car = 475, f_parked_car = 225, uni_vacated_space =   0, f_vacated_space =   0
+# exit 130 university cars: 
+# At time 14, uni_parked_car = 345, f_parked_car = 225, uni_vacated_space =  55, f_vacated_space =  75
+# enter and exit 50 free cars: 
+# At time 14, uni_parked_car = 345, f_parked_car = 225, uni_vacated_space =  55, f_vacated_space =  75
+# clock counter:        82
+# enter 200 university cars: 
+# At time 18, uni_parked_car = 354, f_parked_car = 225, uni_vacated_space =   0, f_vacated_space = 121
+# enter 200 free cars: 
+# At time 22, uni_parked_car = 354, f_parked_car = 346, uni_vacated_space =   0, f_vacated_space =   0
+# exit 40 free cars: 
+# At time 23, uni_parked_car = 354, f_parked_car = 306, uni_vacated_space =   0, f_vacated_space =  40
+# exit 400 university cars : 
+# At time  7, uni_parked_car =   0, f_parked_car = 306, uni_vacated_space = 200, f_vacated_space = 194
+# At time  8, uni_parked_car =   0, f_parked_car = 306, uni_vacated_space = 394, f_vacated_space =   0
+# Break in Module tb_parking_controller at C:/Users/mi/OneDrive/Desktop/DSD-parking-project/tb_controller.v line 239

@@ -115,8 +115,8 @@ module tb_parking_controller();
 
 
 
-        // enter 400 university cars
-        for (i = 0; i < 400; i = i + 1) begin
+        // enter 402 university cars
+        for (i = 0; i < 402; i = i + 1) begin
             car_entered = 1;
             is_uni_car_entered = 1;
             #1;
@@ -124,7 +124,7 @@ module tb_parking_controller();
             is_uni_car_entered = 0;
             #1;
         end
-        $display("enter 400 university cars: \nAt time %d, uni_parked_car = %d, f_parked_car = %d, uni_vacated_space = %d, f_vacated_space = %d",
+        $display("enter 402 university cars: \nAt time %d, uni_parked_car = %d, f_parked_car = %d, uni_vacated_space = %d, f_vacated_space = %d",
                     dut.hour, uni_parked_car, f_parked_car, uni_vacated_space, f_vacated_space);
 
         // exit 25 university cars
@@ -221,8 +221,8 @@ module tb_parking_controller();
         $display("exit 40 free cars: \nAt time %d, uni_parked_car = %d, f_parked_car = %d, uni_vacated_space = %d, f_vacated_space = %d",
                     dut.hour, uni_parked_car, f_parked_car, uni_vacated_space, f_vacated_space);
                     
-        // exit 300 university cars
-        for (i = 0; i < 300; i = i + 1) begin
+        // exit 400 university cars
+        for (i = 0; i < 400; i = i + 1) begin
             car_exited = 1;
             is_uni_car_exited = 1;
             #10;
@@ -230,9 +230,9 @@ module tb_parking_controller();
             is_uni_car_exited= 0;
             #10;
         end
-        $display("exit 300 university cars : \nAt time %d, uni_parked_car = %d, f_parked_car = %d, uni_vacated_space = %d, f_vacated_space = %d",
+        $display("exit 400 university cars : \nAt time %d, uni_parked_car = %d, f_parked_car = %d, uni_vacated_space = %d, f_vacated_space = %d",
                     dut.hour, uni_parked_car, f_parked_car, uni_vacated_space, f_vacated_space);
-        #4000
+        #1000
         $display("At time %d, uni_parked_car = %d, f_parked_car = %d, uni_vacated_space = %d, f_vacated_space = %d",
                     dut.hour, uni_parked_car, f_parked_car, uni_vacated_space, f_vacated_space);
 
