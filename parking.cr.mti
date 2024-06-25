@@ -1,8 +1,8 @@
-C:/Users/mi/OneDrive/Desktop/DSD-parking-project/controller.v {1 {vlog -work work C:/Users/mi/OneDrive/Desktop/DSD-parking-project/controller.v
+C:/Users/mi/OneDrive/Desktop/DSD-parking-project/tb_controller.v {1 {vlog -work work C:/Users/mi/OneDrive/Desktop/DSD-parking-project/tb_controller.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module parking_controller
+-- Compiling module tb_parking_controller
 
 Top level modules:
-	parking_controller
+	tb_parking_controller
 
 } {} {}}

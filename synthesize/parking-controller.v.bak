@@ -23,8 +23,6 @@ module parking_controller(
     reg [31:0] clock_counter;  // counter to count clock cycles
     reg [4:0] hour;  // current hour (0-23)
     reg [8:0] free_capacity;
-    wire [8:0] uni_capacity;
-    assign uni_capacity = TOTAL_SPACES - free_capacity;
 
     // increment hour based on clock cycles
     always @(posedge clk or posedge rst) begin
@@ -74,11 +72,11 @@ module parking_controller(
             // car entry
             if (car_entered) begin
                 if (is_uni_car_entered) begin
-                    if (is_uni_vacated_space != 0) begin
+                    if (uni_parked_car < TOTAL_SPACES - free_capacity && f_parked_car + uni_parked_car < TOTAL_SPACES) begin
                         uni_parked_car <= uni_parked_car + 1;
                     end
                 end else begin
-                    if (is_vacated_space != 0) begin
+                    if (f_parked_car < free_capacity  && f_parked_car + uni_parked_car < TOTAL_SPACES) begin
                         f_parked_car <= f_parked_car + 1;
                     end
                 end
@@ -102,11 +100,12 @@ module parking_controller(
     // calculate vacant spaces and availability
     always @* begin
 
-        if(uni_parked_car > uni_capacity) begin
+
+        if(uni_parked_car > TOTAL_SPACES - free_capacity) begin
             uni_vacated_space = 0;
         end
-        else if(TOTAL_SPACES - f_parked_car >=  uni_capacity) begin
-            uni_vacated_space = uni_capacity - uni_parked_car;
+        else if(TOTAL_SPACES - f_parked_car >=  TOTAL_SPACES - free_capacity) begin
+            uni_vacated_space = TOTAL_SPACES - free_capacity - uni_parked_car;
         end
         else begin
             uni_vacated_space = TOTAL_SPACES - uni_parked_car - f_parked_car;
