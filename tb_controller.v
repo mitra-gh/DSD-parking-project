@@ -67,7 +67,7 @@ module tb_parking_controller();
             is_uni_car_entered = 0;
             #2;
         end
-        $display("enter 202 free cars: At time %d, uni_parked_car = %d, f_parked_car = %d, uni_vacated_space = %d, f_vacated_space = %d",
+        $display("enter 202 free cars: \nAt time %d, uni_parked_car = %d, f_parked_car = %d, uni_vacated_space = %d, f_vacated_space = %d",
                     dut.hour, uni_parked_car, f_parked_car, uni_vacated_space, f_vacated_space);
 
         // enter 200 university cars
@@ -79,7 +79,7 @@ module tb_parking_controller();
             is_uni_car_entered = 0;
             #5;
         end
-        $display("enter 200 university cars: At time %d, uni_parked_car = %d, f_parked_car = %d, uni_vacated_space = %d, f_vacated_space = %d",
+        $display("enter 200 university cars: \nAt time %d, uni_parked_car = %d, f_parked_car = %d, uni_vacated_space = %d, f_vacated_space = %d",
                     dut.hour, uni_parked_car, f_parked_car, uni_vacated_space, f_vacated_space);
 
         // exit 100 university cars
@@ -91,7 +91,7 @@ module tb_parking_controller();
             is_uni_car_exited = 0;
             #5;
         end
-        $display("exit 100 university cars: At time %d, uni_parked_car = %d, f_parked_car = %d, uni_vacated_space = %d, f_vacated_space = %d",
+        $display("exit 100 university cars: \nAt time %d, uni_parked_car = %d, f_parked_car = %d, uni_vacated_space = %d, f_vacated_space = %d",
                     dut.hour, uni_parked_car, f_parked_car, uni_vacated_space, f_vacated_space);
 
         // enter and exit 50 university cars
@@ -110,7 +110,7 @@ module tb_parking_controller();
             is_uni_car_entered = 0;
             #1;
         end
-        $display("enter and exit 50 university cars: At time %d, uni_parked_car = %d, f_parked_car = %d, uni_vacated_space = %d, f_vacated_space = %d",
+        $display("enter and exit 50 university cars: \nAt time %d, uni_parked_car = %d, f_parked_car = %d, uni_vacated_space = %d, f_vacated_space = %d",
                     dut.hour, uni_parked_car, f_parked_car, uni_vacated_space, f_vacated_space);
 
 
@@ -124,7 +124,7 @@ module tb_parking_controller();
             is_uni_car_entered = 0;
             #1;
         end
-        $display("enter 400 university cars: At time %d, uni_parked_car = %d, f_parked_car = %d, uni_vacated_space = %d, f_vacated_space = %d",
+        $display("enter 400 university cars: \nAt time %d, uni_parked_car = %d, f_parked_car = %d, uni_vacated_space = %d, f_vacated_space = %d",
                     dut.hour, uni_parked_car, f_parked_car, uni_vacated_space, f_vacated_space);
 
         // exit 25 university cars
@@ -136,7 +136,7 @@ module tb_parking_controller();
             is_uni_car_exited= 0;
             #1;
         end
-        $display("exit 25 university cars: At time %d, uni_parked_car = %d, f_parked_car = %d, uni_vacated_space = %d, f_vacated_space = %d",
+        $display("exit 25 university cars: \nAt time %d, uni_parked_car = %d, f_parked_car = %d, uni_vacated_space = %d, f_vacated_space = %d",
                     dut.hour, uni_parked_car, f_parked_car, uni_vacated_space, f_vacated_space);
 
 
@@ -150,7 +150,7 @@ module tb_parking_controller();
             is_uni_car_entered = 0;
             #5;
         end
-        $display("enter 50 free cars: At time %d, uni_parked_car = %d, f_parked_car = %d, uni_vacated_space = %d, f_vacated_space = %d",
+        $display("enter 50 free cars: \nAt time %d, uni_parked_car = %d, f_parked_car = %d, uni_vacated_space = %d, f_vacated_space = %d",
                     dut.hour, uni_parked_car, f_parked_car, uni_vacated_space, f_vacated_space);
 
         // exit 130 university cars
@@ -162,7 +162,7 @@ module tb_parking_controller();
             is_uni_car_exited= 0;
             #1;
         end
-        $display("exit 130 university cars: At time %d, uni_parked_car = %d, f_parked_car = %d, uni_vacated_space = %d, f_vacated_space = %d",
+        $display("exit 130 university cars: \nAt time %d, uni_parked_car = %d, f_parked_car = %d, uni_vacated_space = %d, f_vacated_space = %d",
                     dut.hour, uni_parked_car, f_parked_car, uni_vacated_space, f_vacated_space);
 
 
@@ -182,9 +182,9 @@ module tb_parking_controller();
             is_uni_car_entered = 0;
             #1;
         end
-        $display("enter and exit 50 free cars: At time %d, uni_parked_car = %d, f_parked_car = %d, uni_vacated_space = %d, f_vacated_space = %d",
+        $display("enter and exit 50 free cars: \nAt time %d, uni_parked_car = %d, f_parked_car = %d, uni_vacated_space = %d, f_vacated_space = %d",
                     dut.hour, uni_parked_car, f_parked_car, uni_vacated_space, f_vacated_space);
-
+        $display("clock counter:%d",dut.clock_counter);
         // enter 200 university cars
         for (i = 0; i < 200; i = i + 1) begin
             car_entered = 1;
@@ -194,7 +194,7 @@ module tb_parking_controller();
             is_uni_car_entered = 0;
             #10;
         end
-        $display("enter 200 university cars: At time %d, uni_parked_car = %d, f_parked_car = %d, uni_vacated_space = %d, f_vacated_space = %d",
+        $display("enter 200 university cars: \nAt time %d, uni_parked_car = %d, f_parked_car = %d, uni_vacated_space = %d, f_vacated_space = %d",
                     dut.hour, uni_parked_car, f_parked_car, uni_vacated_space, f_vacated_space);
         
         // enter 200 free cars
@@ -206,7 +206,7 @@ module tb_parking_controller();
             is_uni_car_entered = 0;
             #10;
         end
-        $display("enter 200 free cars: At time %d, uni_parked_car = %d, f_parked_car = %d, uni_vacated_space = %d, f_vacated_space = %d",
+        $display("enter 200 free cars: \nAt time %d, uni_parked_car = %d, f_parked_car = %d, uni_vacated_space = %d, f_vacated_space = %d",
                     dut.hour, uni_parked_car, f_parked_car, uni_vacated_space, f_vacated_space);
 
         // exit 40 free cars
@@ -218,7 +218,7 @@ module tb_parking_controller();
             is_uni_car_exited= 0;
             #10;
         end
-        $display("exit 40 free cars: At time %d, uni_parked_car = %d, f_parked_car = %d, uni_vacated_space = %d, f_vacated_space = %d",
+        $display("exit 40 free cars: \nAt time %d, uni_parked_car = %d, f_parked_car = %d, uni_vacated_space = %d, f_vacated_space = %d",
                     dut.hour, uni_parked_car, f_parked_car, uni_vacated_space, f_vacated_space);
                     
         // exit 300 university cars
@@ -230,7 +230,7 @@ module tb_parking_controller();
             is_uni_car_exited= 0;
             #10;
         end
-        $display("exit 300 university cars : At time %d, uni_parked_car = %d, f_parked_car = %d, uni_vacated_space = %d, f_vacated_space = %d",
+        $display("exit 300 university cars : \nAt time %d, uni_parked_car = %d, f_parked_car = %d, uni_vacated_space = %d, f_vacated_space = %d",
                     dut.hour, uni_parked_car, f_parked_car, uni_vacated_space, f_vacated_space);
         #4000
         $display("At time %d, uni_parked_car = %d, f_parked_car = %d, uni_vacated_space = %d, f_vacated_space = %d",
