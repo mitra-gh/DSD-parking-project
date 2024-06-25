@@ -4,21 +4,40 @@ K3
 cModel Technology
 Z0 dC:\altera\13.1
 vparking_controller
-!i10b 1
-!s100 KBPdnZJDR3GSl5mR[oQmf2
-IngY]_DkDm@1L]`gmh=UJ73
-Vk:V]88UT4GKLo3>lgo?PD1
-dC:\Users\mi\OneDrive\Desktop\DSD-parking-project
-w1719294621
-8C:/Users/mi/OneDrive/Desktop/DSD-parking-project/controller.v
-FC:/Users/mi/OneDrive/Desktop/DSD-parking-project/controller.v
+Z1 !s100 `RfdlG_0`ATiP[M3Qh9``3
+Z2 I[GZ2UUO;2dYD8Y@?X0mae0
+Z3 VF9QMLbWn?]<3nRT]JT_1i3
+Z4 dC:\Users\mi\OneDrive\Desktop\DSD-parking-project
+Z5 w1719300682
+Z6 8C:/Users/mi/OneDrive/Desktop/DSD-parking-project/controller.v
+Z7 FC:/Users/mi/OneDrive/Desktop/DSD-parking-project/controller.v
 L0 1
-OV;L;10.1d;51
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -reportprogress|300|-work|work|C:/Users/mi/OneDrive/Desktop/DSD-parking-project/controller.v|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1719301777.297000
+Z12 !s107 C:/Users/mi/OneDrive/Desktop/DSD-parking-project/controller.v|
+!s101 -O0
+vtb_parking_controller
+!i10b 1
+!s100 jkbH0mmMbGB6;]=B>_Q]Y0
+I:98LJiXEBzbAa7BYS4BQk3
+Z13 V;V]oZ>895U7[k8::nkVhi1
+R4
+w1719301773
+Z14 8C:/Users/mi/OneDrive/Desktop/DSD-parking-project/tb_controller.v
+Z15 FC:/Users/mi/OneDrive/Desktop/DSD-parking-project/tb_controller.v
+L0 3
+R8
 r1
 !s85 0
 31
-!s108 1719294862.287000
-!s107 C:/Users/mi/OneDrive/Desktop/DSD-parking-project/controller.v|
-!s90 -reportprogress|300|-work|work|C:/Users/mi/OneDrive/Desktop/DSD-parking-project/controller.v|
+!s108 1719301777.328000
+!s107 C:/Users/mi/OneDrive/Desktop/DSD-parking-project/tb_controller.v|
+Z16 !s90 -reportprogress|300|-work|work|C:/Users/mi/OneDrive/Desktop/DSD-parking-project/tb_controller.v|
 !s101 -O0
-o-work work -O0
+R10

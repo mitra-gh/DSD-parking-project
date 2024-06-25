@@ -5,7 +5,7 @@ entity parking_controller is
         TOTAL_UNI_SPACES: integer := 500;
         TOTAL_FREE_SPACES_MORNING: integer := 200;
         TOTAL_SPACES    : integer := 700;
-        CLOCKS_PER_HOUR : integer := 10
+        CLOCKS_PER_HOUR : integer := 100
     );
     port(
         clk             : in     vl_logic;

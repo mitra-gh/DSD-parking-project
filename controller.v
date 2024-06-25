@@ -18,7 +18,7 @@ module parking_controller(
     parameter TOTAL_UNI_SPACES = 500;
     parameter TOTAL_FREE_SPACES_MORNING = 200;
     parameter TOTAL_SPACES = 700;
-    parameter CLOCKS_PER_HOUR = 10;
+    parameter CLOCKS_PER_HOUR = 100;
 
     reg [31:0] clock_counter;  // counter to count clock cycles
     reg [4:0] hour;  // current hour (0-23)
@@ -72,11 +72,11 @@ module parking_controller(
             // car entry
             if (car_entered) begin
                 if (is_uni_car_entered) begin
-                    if (uni_parked_car < TOTAL_SPACES - free_capacity) begin
+                    if (uni_parked_car < TOTAL_SPACES - free_capacity && f_parked_car + uni_parked_car < TOTAL_SPACES) begin
                         uni_parked_car <= uni_parked_car + 1;
                     end
                 end else begin
-                    if (f_parked_car < free_capacity) begin
+                    if (f_parked_car < free_capacity  && f_parked_car + uni_parked_car < TOTAL_SPACES) begin
                         f_parked_car <= f_parked_car + 1;
                     end
                 end
@@ -99,8 +99,28 @@ module parking_controller(
 
     // calculate vacant spaces and availability
     always @* begin
-        uni_vacated_space = TOTAL_SPACES - free_capacity - uni_parked_car;
-        f_vacated_space = free_capacity - f_parked_car;
+
+
+        if(uni_parked_car > TOTAL_SPACES - free_capacity) begin
+            uni_vacated_space = 0;
+        end
+        else if(TOTAL_SPACES - f_parked_car >=  TOTAL_SPACES - free_capacity) begin
+            uni_vacated_space = TOTAL_SPACES - free_capacity - uni_parked_car;
+        end
+        else begin
+            uni_vacated_space = TOTAL_SPACES - uni_parked_car - f_parked_car;
+        end
+
+        if(f_parked_car > free_capacity) begin
+            f_vacated_space = 0;
+        end
+        else if(TOTAL_SPACES - uni_parked_car >=  free_capacity) begin
+            f_vacated_space = free_capacity - f_parked_car;
+        end
+        else begin
+            f_vacated_space = TOTAL_SPACES - uni_parked_car - f_parked_car;
+        end
+
         is_uni_vacated_space = (uni_vacated_space > 0);
         is_vacated_space = (f_vacated_space > 0);
     end
