@@ -1,6 +1,6 @@
 # DSD-parking-project
 
-## Question 8: University Controller
+## Question 8: University Parking Controller
 
 **Student Number:** 401106363
 
