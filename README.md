@@ -191,7 +191,7 @@ else begin
     f_vacated_space = TOTAL_SPACES - uni_parked_car - f_parked_car;
 end
 ```
-In the previous scenario, if it happens for university cars, then some of the free section's capacity is reduced. Considering that a maximum of 700 cars can enter, this must be taken into account so that the remaining car amount can be entered.
+In the previous scenario, if it happens for university cars, then some of the free section's capacity is reduced(current time), Due to the limitation of 700, free cars can only enter the remaining part, even though they have the right to more capacity.
 
 ```verilog
 else if(TOTAL_SPACES - uni_parked_car >=  free_capacity) begin
@@ -297,7 +297,7 @@ $display("enter 402 university cars: \nAt time %d, uni_parked_car = %d, f_parked
 ```
 #### Test6: Displaying Capacity Increase with Hourly Change:
 
-In this test case, the section took as many cars as possible, but the total capacity, which is 700, was considered. Also, university cars are parked in the parking lot, so they cannot enter.
+In this test case, the section took as many cars as possible, but the total capacity, which is 700, was considered. Also, university cars are parked in the parking more than their capacity, so they cannot enter from now on.
 ![image](./img/test6.png)
 ```verilog
 // exit 25 university cars
@@ -364,7 +364,7 @@ $display("enter and exit 50 free cars: \nAt time %d, uni_parked_car = %d, f_park
 ```
 #### Test9: Testing Hourly Change and Entry Overflow in the New Hour:
 
-Note that the clock_counter is 82, meaning there is an 18-clock difference until the next hour. According to the code, each car goes through two clocks, so we expect the cars to enter after 9 more clocks.
+Note that the clock_counter is 82, meaning there is an 18-clock difference until the next hour. According to the code, each car goes through two clocks, so we expect 9 cars to enter.
 ![image](./img/testt9.png)
 ```verilog
 $display("enter and exit 50 free cars: \nAt time %d, uni_parked_car = %d, f_parked_car = %d, uni_vacated_space = %d, f_vacated_space = %d",
@@ -383,7 +383,7 @@ $display("enter 200 university cars: \nAt time %d, uni_parked_car = %d, f_parked
             dut.hour, uni_parked_car, f_parked_car, uni_vacated_space, f_vacated_space);
 ```
 
-#### Test10: Normal Exit of Free Cars and Unusual Exit Changing Capacity from 7 to 8:
+#### Test10: Normal Exit of Free Cars and Unusual Exit of University Cars and Changing Capacity from 7 to 8:
 ![image](./img/test10.png)
 ```verilog
 // exit 40 free cars
