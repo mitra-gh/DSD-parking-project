@@ -13,7 +13,9 @@
 
 **Name:** Mitra Gholipoor
 
-The complete report in Persian :[report.pdf](./report.pdf).
+The complete report in Persian: [report.pdf](./report.pdf).
+
+log of testbench: [test_log.txt](./test_log.txt).
 
 ## Question Description:
 ![Image](./img/question.png)
